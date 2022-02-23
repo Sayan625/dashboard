@@ -23,31 +23,46 @@ const Content = () => {
 
     }
 
+    function formatValue(input){
+        if(input)
+        {
+            if(input.length>12)
+            {
+                const firstLetters=input.substring(0,5)
+                const lastLetters=input.substring(input.length,input.length-7)
+                const formatedValue = firstLetters+".."+lastLetters
+                return formatedValue
+            }
+            else
+            return input
+
+        }
+    }
+
     useEffect(() => {
         getData()
     }, [])
 
-
     return (
         <div className={styles.content}>
             <div className={styles.top}>
-                <a className={`${styles.active} ${styles.textColorPrimary}`}>
+                <a className={`${styles.active} ${styles.text_colorPrimary}`}>
                     Section
                 </a>
-                <div className={`${styles.bgColorPrimary} ${styles.textColorPrimary} ${styles.topItem}`}>
+                <div className={`${styles.bg_colorPrimary} ${styles.text_colorPrimary} ${styles.topItem} ${styles.flex_center}`}>
                     {walletIcon()}
                     <p>0.2 $XYZ</p>
-                    <div className={`${styles.bgColorSecondary} ${styles.textColorTertiary} ${styles.bRadiusSmall}`}>
+                    <div className={`${styles.bg_colorSecondary} ${styles.text_colorTertiary} ${styles.bdr_radiusSmall}`}>
                         <p>Tier I</p>
                     </div>
                 </div>
             </div>
 
             <div className={styles.gridContainer}>
-                <div className={`${styles.gridItem1} ${styles.bgColorSecondary} `}>
-                    <div className={`${styles.item} ${styles.textColorPurple}`}>
+                <div className={`${styles.gridItem1} ${styles.bg_colorSecondary} `}>
+                    <div className={`${styles.item} ${styles.text_colorPurple}`}>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <a className={styles.bgColorWhite}>Tutorial</a>
+                        <a className={styles.bg_colorWhite}>Tutorial</a>
                         <div className={styles.img}>
                             <Image src={image} back alt="image" />
                         </div>
@@ -56,11 +71,11 @@ const Content = () => {
                         </a>
                     </div>
                 </div>
-                <div className={`${styles.gridItem2} ${styles.bgColorPrimary}`}>
+                <div className={`${styles.gridItem2} ${styles.text_colorPrimary} ${styles.bg_colorPrimary}`}>
                     <p>Your rewards</p>
-                    <div className={styles.gridItem2BtnContainer}>
+                    <div className={`${styles.gridItem2BtnContainer} ${styles.flex_center}`}>
                         <p>$ 0.26231428</p>
-                        <div className={styles.gridItem2Btn}>
+                        <div className={`${styles.gridItem2Btn}  ${styles.flex_center} ${styles.bg_colorTertiary}`}>
                             {customLinkIcon()}
                             <a>Custom link</a>
                         </div>
@@ -71,54 +86,54 @@ const Content = () => {
                         <p>$210 BTC</p>
                     </div>
                 </div>
-                <div className={`${styles.gridItem3} ${styles.bgColorPrimary}`}>
-                    <div>
+                <div className={`${styles.gridItem3} ${styles.bg_colorPrimary} ${styles.text_colorSecondary}`}>
+                    <div className={`${styles.text_colorPrimary} ${styles.flex_center}`}>
                         {moneyBag()}
                         <p >12.5% of fee</p>
                     </div>
                     <p className={styles.gridItem3Text}>Your Referral Link for xyz</p>
                     <div className={styles.inputContainer}>
-                        <input type="text" defaultValue={'https://unityexchange.design'} />
+                        <input className={styles.text_colorPrimary} type="text" defaultValue={'https://unityexchange.design'} />
                         {copyIcon()}
                     </div>
 
                 </div>
-                <div className={`${styles.gridItem3} ${styles.bgColorPrimary}`}>
-                    <div>
+                <div className={`${styles.gridItem3} ${styles.bg_colorPrimary} ${styles.text_colorSecondary}`}>
+                    <div className={`${styles.text_colorPrimary} ${styles.flex_center}`}>
                         {moneyBag()}
                         <p>12.5% of fee</p>
                     </div>
                     <p className={styles.gridItem3Text}>Your Referral Link for xyz</p>
                     <div className={styles.inputContainer}>
-                        <input type="text" defaultValue={'https://unityexchange.design'} />
+                        <input className={styles.text_colorPrimary} type="text" defaultValue={'https://unityexchange.design'} />
                         {copyIcon()}
                     </div>
 
                 </div>
             </div>
-            <div className={`${styles.bottomBtnGrp} ${styles.textColorPrimary}`}>
+            <div className={`${styles.bottomBtnGrp} ${styles.text_colorPrimary}`}>
                 <a className={styles.active}>First Tab</a>
                 <a>Second Tab</a>
             </div>
-                <table>
+                <table className={styles.text_colorPrimary}>
                     <thead>
                         <tr>
-                            <th className={styles.bgColorPrimary}>ASSET</th>
-                            <th className={styles.bgColorPrimary}>AMOUNT</th>
-                            <th className={styles.bgColorPrimary}>USER ACCOUNT</th>
-                            <th className={styles.bgColorPrimary}>REFERRAL EARNING</th>
+                            <th className={`${styles.bg_colorPrimary} ${styles.text_colorSecondary}` }>ASSET</th>
+                            <th className={`${styles.bg_colorPrimary} ${styles.text_colorSecondary}` }>AMOUNT</th>
+                            <th className={`${styles.bg_colorPrimary} ${styles.text_colorSecondary}` }>USER ACCOUNT</th>
+                            <th className={`${styles.bg_colorPrimary} ${styles.text_colorSecondary}`}>REFERRAL EARNING</th>
                         </tr>
                     </thead>
                     <tbody >
                         <tr >
-                            <th className={styles.bgColorPrimary}>
-                                <div className={styles.tableItem}>
+                            <th className={`${styles.bg_colorPrimary} ${styles.text_colorSecondary}`}>
+                                <div className={`${styles.tableItem} ${styles.flex_center}`}>
                                     {bitCoinIcon()}
                                     <div className={styles.tableData}>
-                                        <p className={styles.tableItemTextPrimary} >{data[0]?.asset}</p>
-                                        <div className={styles.tableItemCard}>
-                                            <p className={styles.tableItemTextSecondary}>{data[0]?.type}</p>
-                                            <div className={styles.tableItemCardContent}>
+                                        <p className={`${styles.tableItemTextPrimary} ${styles.text_colorPrimary}`} >{data[0]?.asset}</p>
+                                        <div className={styles.flex_center}>
+                                            <p className={`${styles.tableItemTextSecondary} ${styles.text_colorSecondary}`}>{data[0]?.type}</p>
+                                            <div className={`${styles.tableItemContent} ${styles.flex_center}`}>
                                                 <img className={styles.tableItemCardImg} src={data[0]?.chain.img} alt="image" />
                                                 <p>{data[0]?.chain.name}</p>
                                             </div>
@@ -126,17 +141,17 @@ const Content = () => {
                                     </div>
                                 </div>
                             </th>
-                            <th className={styles.bgColorPrimary}>
-                                <p className={styles.tableItemTextPrimary}>{`${data[0]?.amount} BNB`} </p>
-                                <p className={styles.tableItemTextSecondary} >{data[0]?.state}</p>
+                            <th className={`${styles.bg_colorPrimary} ${styles.text_colorSecondary}`}>
+                                <p className={`${styles.tableItemTextPrimary} ${styles.text_colorPrimary}`}>{`${data[0]?.amount} BNB`} </p>
+                                <p className={`${styles.tableItemTextSecondary} ${styles.text_colorSecondary}`} >{data[0]?.state}</p>
                             </th>
-                            <th className={styles.bgColorPrimary}>
-                                <p className={styles.tableItemTextPrimary}>0xFbE..0f58A7D</p>
+                            <th className={`${styles.bg_colorPrimary} ${styles.text_colorSecondary}`}>
+                                <p className={`${styles.tableItemTextPrimary} ${styles.text_colorPrimary}`}> {formatValue(data[0]?.user)}</p>
                             </th>
-                            <th className={styles.bgColorPrimary}>
-                                <p className={styles.tableItemTextPrimary}>{`${data[0]?.referral_earnings} BNB`}</p>
-                                <div className={styles.tableItemLink}>
-                                    <p className={styles.tableItemTextSecondary} >View on BSC Scan</p>
+                            <th className={`${styles.bg_colorPrimary} ${styles.text_colorSecondary}`}>
+                                <p className={`${styles.tableItemTextPrimary} ${styles.text_colorPrimary}`}>{`${data[0]?.referral_earnings} BNB`}</p>
+                                <div className={`${styles.tableItemLink} ${styles.flex_center}`}>
+                                    <p className={`${styles.tableItemTextSecondary} ${styles.text_colorSecondary}`} >View on BSC Scan</p>
                                     {customLinkIconSmall()}
                                 </div>
                             </th>

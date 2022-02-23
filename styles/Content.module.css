@@ -1,37 +1,44 @@
-.bgColorPrimary{
+.bg_colorPrimary{
     background-color: #191B20;
 }
 
-.bgColorSecondary{
+.bg_colorSecondary{
     background-color: #ABE8FF;
 }
 
-.bgColorTertiary{
+.bg_colorTertiary{
    background-color: #3772FF;
 }
 
-.bgColorWhite{
+.bg_colorWhite{
     background-color: white;
 }
 
-.textColorPrimary{
+.text_colorPrimary{
     color: white;
 }
 
-.textColorSecondary{
+.text_colorSecondary{
     color: #808191;
 }
 
-.textColorTertiary{
+.text_colorTertiary{
     color: #3772FF;
 }
-.textCOlorPurple{
+.text_colorPurple{
     color: #2B2557;
 }
 
-.bRadiusSmall{
+.bdr_radiusSmall{
 border-radius: 5px;
 }
+
+.flex_center{
+display: flex;
+align-items: center;
+}
+
+
 
 
 
@@ -50,7 +57,7 @@ border-radius: 5px;
     border-bottom: 2px solid #3772FF;
 }
 
-.topButtonItem>.textColorPrimary{
+.topButtonItem>.text_colorPrimary{
     margin: 0;
     font-size: 16px;
 }
@@ -58,8 +65,6 @@ border-radius: 5px;
 
 .topItem{
     height: fit-content;
-    display: flex;
-    align-items: center;
     padding: 5px 10px;
     font-size: 16px;
     border-radius: 12px;
@@ -69,7 +74,7 @@ border-radius: 5px;
     margin: 0 15px;
 }
 
-.topItem>.textColorTertiary>p{
+.topItem>.text_colorTertiary>p{
     margin: 0;
     font-size: 12px;
     font-weight: 600;
@@ -79,8 +84,8 @@ border-radius: 5px;
 .gridContainer{
     margin-top: 15px;
     display: grid;
-    grid-template-columns: 1fr 1frs;
-    gap: 12px;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
 
 .gridItem1{
@@ -113,7 +118,7 @@ border-radius: 5px;
     right: -30px;
 }
 
-.gridItem1 .bgColorWhite{
+.gridItem1 .bg_colorWhite{
     display: block;
     width: fit-content;
     padding: 3px 20px;
@@ -126,7 +131,6 @@ border-radius: 5px;
 
 .gridItem2{
     grid-column: span 2;
-    color: white;
     border-radius: 24px;
     padding: 12px 20px;
 }
@@ -137,10 +141,7 @@ border-radius: 5px;
 
 
 .gridItem2Btn{
-    display: flex;
-    align-items: center;
     width: fit-content;
-    background-color: #3772FF;
     font-size: 14px;
     font-weight: 700;
     padding: 8px 15px;
@@ -149,11 +150,9 @@ border-radius: 5px;
 }
 
 .gridItem2BtnContainer{
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 550;
 }
 
 
@@ -182,17 +181,11 @@ border-radius: 5px;
 
 .gridItem3{
     border-radius: 16px;
-    color: #808191;
     padding: 12px 20px;
 
 }
 
 
-.gridItem3>div{
-    color: white;
-    display: flex;
-    align-items: center;
-}
 
 .gridItem3>div>p{
     margin: 0 0 0 10px;
@@ -211,7 +204,6 @@ border-radius: 5px;
 
 .gridItem3 input{
     background-color: #242731;
-    color: white;
     font-size: 14px;
     border: none;
     outline: none;
@@ -234,7 +226,7 @@ border-radius: 5px;
 }
 
 .bottomBtnGrp a{
-    margin: 15px 0;
+    margin: 20px 0;
     font-size: 16px;
     padding-bottom: 3px;
 }
@@ -246,13 +238,11 @@ border-radius: 5px;
 
 .content table{
     width: 100%;
-    color: white;
     border-collapse: collapse;
 }
 
 
 .content table th{
-    color: #808191;
     font-size: 10px;
     padding: 10px;
     width: 25%;
@@ -286,19 +276,15 @@ border-radius: 5px;
 
 
 .tableItem{
-    display: flex;
-    align-items: center;
     padding-left: 15px;
 
 }
 
 .tableItemTextPrimary{
     font-size: 14px;
-    color: white;
 }
 
 .tableItemTextSecondary{
-    color: #808191;
     font-size: 10px;
 }
 
@@ -309,17 +295,11 @@ border-radius: 5px;
 
 }
 
-.tableItemCard{
-    display: flex;
-    align-items: center;
-}
 
 
-.tableItemCardContent{
+.tableItemContent{
     margin-left: 10px;
     width: fit-content;
-    display: flex;
-    align-items: center;
     background-color: #353945;
     border-radius: 7px;
     padding: 2px 5px;
@@ -335,9 +315,7 @@ border-radius: 5px;
 }
 
 .tableItemLink{
-    display: flex;
     width: 100%;
-    align-items: center;
     justify-content: center;
 }
 
