@@ -64,7 +64,7 @@ const Content = () => {
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         <a className={styles.bg_colorWhite}>Tutorial</a>
                         <div className={styles.img}>
-                            <Image src={image} back alt="image" />
+                            <Image src={image} alt="image" />
                         </div>
                         <a className={styles.closeBtn}>
                         {closeIcon()}
@@ -92,7 +92,7 @@ const Content = () => {
                         <p >12.5% of fee</p>
                     </div>
                     <p className={styles.gridItem3Text}>Your Referral Link for xyz</p>
-                    <div className={styles.inputContainer}>
+                    <div className={`${styles.inputContainer} ${styles.flex_center}`}>
                         <input className={styles.text_colorPrimary} type="text" defaultValue={'https://unityexchange.design'} />
                         {copyIcon()}
                     </div>
@@ -104,7 +104,7 @@ const Content = () => {
                         <p>12.5% of fee</p>
                     </div>
                     <p className={styles.gridItem3Text}>Your Referral Link for xyz</p>
-                    <div className={styles.inputContainer}>
+                    <div className={`${styles.inputContainer} ${styles.flex_center}`}>
                         <input className={styles.text_colorPrimary} type="text" defaultValue={'https://unityexchange.design'} />
                         {copyIcon()}
                     </div>

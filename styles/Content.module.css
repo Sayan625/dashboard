@@ -116,6 +116,7 @@ align-items: center;
     position: absolute;
     top: -26px;
     right: -30px;
+    cursor: pointer;
 }
 
 .gridItem1 .bg_colorWhite{

@@ -52,7 +52,7 @@ function LeftBar() {
                             return (
                             <div className={`${styles.menuItem} ${styles.flex_center} ${styles.active} ${styles.color_white}`}>
                             {icon}
-                            <p className={styles.menuText}>{element}</p>
+                            <a className={styles.menuText}>{element}</a>
                         </div>
                         )
                     }
@@ -62,7 +62,7 @@ function LeftBar() {
                     return(
                         <div className={`${styles.menuItem} ${styles.flex_center}`}>
                         {icon}
-                        <p className={styles.menuText}>{element}</p>
+                        <a className={styles.menuText}>{element}</a>
                     </div>)
                     })
                 }

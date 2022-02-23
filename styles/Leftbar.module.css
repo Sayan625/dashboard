@@ -57,7 +57,9 @@
 
 .menuItem{
     height: 25px;
+    width: fit-content;
     margin-bottom: 1.8vh;
+    cursor: pointer;
 }
 
 
@@ -68,7 +70,7 @@
 
 .active{
 background-color: #353945;
-padding: 20px ;
+padding: 20px 55px 20px 20px ;
 border-radius: 12px;
 }
 
