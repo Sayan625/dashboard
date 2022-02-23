@@ -1,0 +1,90 @@
+.rightContainer{
+    height: 100%;
+    background-color: black;
+    color: white;
+    padding: 20px 30px;
+}
+
+.rightbarItemHolder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rightbarItem{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    background-color: #353945;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 3px 8px;
+    cursor: pointer;
+
+}
+.rightbarItem p{
+    margin: 5px 10px;
+}
+
+.itemImage{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.itemWallet{
+    border: 1px solid #3772FF;
+    background-color: inherit;
+}
+
+.itemWallet p{
+    margin: 4px 25px;
+}
+
+.rightContainer span{
+    margin-right: 10px;
+}
+
+.linkText{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}
+.link{
+    margin-left: 10px;
+    line-height: 48px;
+    font-size: 16px;
+    letter-spacing: -1px;
+    font-weight: 400;
+}
+
+.input{
+    width: 100%;
+    background-color: #353945;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    padding: 18px;
+    font-size: 14px;
+}
+
+.btnGrp{
+    margin-top: 30px;
+    padding: 0px 25px;
+}
+
+.button{
+    background-color: #3772FF;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+.cancelBtn{
+background-color: inherit;
+border: 1px solid #353945;
+padding: 2px 23px;
+}
+

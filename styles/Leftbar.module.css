@@ -1,0 +1,135 @@
+
+
+.leftContainer{
+    height: 100%;
+    background: black;
+    color: #808191;
+    padding-top: 8px;
+
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 500;
+    line-height: 31px;
+    color: white;
+}
+
+.headerText{
+    display: flex;
+    align-items: center;
+}
+
+.circle{
+    display: flex;
+    margin-right: 10px;
+    color: white;
+    width: 29.82px;
+    height: 28.24px;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: #3772FF;
+    border-radius: 50%;
+}
+
+.menu{
+    margin:0 20px 0 20px;
+    padding-bottom: 100px;
+}
+
+.menuItem{
+    height: 25px;
+     display: flex;
+     align-items: center;
+     margin-bottom: 1.8vh;
+}
+
+
+.menuText{
+    margin-left:30px ;
+    font-size: 14px;
+}
+
+.active{
+background-color: #353945;
+padding: 20px ;
+color: white;
+border-radius: 12px;
+}
+
+.bottom{
+    position:relative;
+    width: 100%;
+    bottom: 30px;
+    padding-right: 35px;
+    padding-left: 15px;
+    
+}
+
+.bottomItemHolder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+
+
+.bottomItem{
+    display: flex;
+    align-items: center;
+    background-color: #353945;
+    color: white;
+    border-radius: 10px;
+    margin: 0;
+    padding: 5px 10px;
+    font-weight: 600 ;
+}
+
+.bottomItem>.circle{
+    width: 17px;
+    height: 17px;
+    font-size: 10px;
+}
+
+.bottomItem p{
+    margin: 0;
+    padding: 0;
+}
+
+.bottomText{
+    font-size: 14px;
+}
+
+.bottomTextBG{
+    background-color: #A3E3FF;
+}
+
+.bottomTextColor{
+    color:#3772FF; 
+}
+
+.itemToggle{
+    width: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #353945;
+    border-radius: 12px;
+    margin-left: 20px;
+    padding: 3px 5px ;
+}
+
+.itemToggle .circle{
+    height: 18px;
+    width: 18px;
+    margin-right: 0;
+}
+
+.bottomItemHolder>div{
+display: flex;
+align-items: center;
+}
