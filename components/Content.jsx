@@ -2,7 +2,13 @@ import styles from '../styles/Content.module.css'
 import { useEffect, useState } from "react"
 import Image from "next/image";
 import image from '../public/image.png'
-import { customLinkIcon, customLinkIconSmall, copyIcon, moneyBag, bitCoinIcon } from "./AllSvg.js"
+import { customLinkIcon,
+    customLinkIconSmall,
+    copyIcon,
+    moneyBag,
+    bitCoinIcon,
+    closeIcon,
+    walletIcon } from "./AllSvg.js"
 
 
 const Content = () => {
@@ -21,7 +27,6 @@ const Content = () => {
         getData()
     }, [])
 
-    console.log(data)
 
     return (
         <div className={styles.content}>
@@ -30,11 +35,7 @@ const Content = () => {
                     Section
                 </a>
                 <div className={`${styles.bgColorPrimary} ${styles.textColorPrimary} ${styles.topItem}`}>
-                    <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.3966 10.3811H16.3446C14.8568 10.3804 13.6509 9.41664 13.6499 8.2267C13.6499 7.03676 14.8568 6.073 16.3446 6.07227H20.3966" stroke="#3772FF" stroke-width="1.25176" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M16.8029 8.17741H16.491" stroke="#3772FF" stroke-width="1.25176" stroke-linecap="round" stroke-linejoin="round" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.4926 1.25851H15.144C18.0448 1.25851 20.3965 3.13936 20.3965 5.45941V11.2048C20.3965 13.5249 18.0448 15.4057 15.144 15.4057H6.4926C3.59178 15.4057 1.24011 13.5249 1.24011 11.2048V5.45941C1.24011 3.13936 3.59178 1.25851 6.4926 1.25851Z" stroke="#3772FF" stroke-width="1.25176" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                    {walletIcon()}
                     <p>0.2 $XYZ</p>
                     <div className={`${styles.bgColorSecondary} ${styles.textColorTertiary} ${styles.bRadiusSmall}`}>
                         <p>Tier I</p>
@@ -51,11 +52,7 @@ const Content = () => {
                             <Image src={image} back alt="image" />
                         </div>
                         <a className={styles.closeBtn}>
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12.3738" cy="12.6436" r="12" fill="white" />
-                                <path d="M15.8738 9.14355L8.87378 16.1436" stroke="#191B20" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M8.87378 9.14355L15.8738 16.1436" stroke="#191B20" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
+                        {closeIcon()}
                         </a>
                     </div>
                 </div>
@@ -93,7 +90,7 @@ const Content = () => {
                     </div>
                     <p className={styles.gridItem3Text}>Your Referral Link for xyz</p>
                     <div className={styles.inputContainer}>
-                        <input type="text" value={'https://unityexchange.design'} />
+                        <input type="text" defaultValue={'https://unityexchange.design'} />
                         {copyIcon()}
                     </div>
 

@@ -59,7 +59,7 @@ border-radius: 5px;
 .topItem{
     height: fit-content;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     padding: 5px 10px;
     font-size: 16px;
     border-radius: 12px;
@@ -164,13 +164,14 @@ border-radius: 5px;
 
 .tag{
     display: flex;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .tag p{
+    margin: 0;
     background-color: #353945;
     border-radius: 11px;
-    padding: 5px 8px;
+    padding: 3px 8px;
 }
 .tag p:not(first-child){
     margin-right: 10px;
