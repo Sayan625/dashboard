@@ -15,6 +15,8 @@ const Content = () => {
 
     const [data, setData] = useState([])
 
+    
+
     async function getData() {
         const rawData = await fetch('https://raw.githubusercontent.com/akshita151199/APIs/main/data')
         const tempData = await rawData.json()
@@ -130,26 +132,26 @@ const Content = () => {
                                 <div className={`${styles.tableItem} ${styles.flex_center}`}>
                                     {bitCoinIcon()}
                                     <div className={styles.tableData}>
-                                        <p className={`${styles.tableItemTextPrimary} ${styles.text_colorPrimary}`} >{data[0]?.asset}</p>
+                                        <p className={`${styles.tableItemTextPrimary} ${styles.text_colorPrimary}`} >{data[0]? data[0].asset : "loading"}</p>
                                         <div className={styles.flex_center}>
-                                            <p className={`${styles.tableItemTextSecondary} ${styles.text_colorSecondary}`}>{data[0]?.type}</p>
+                                            <p className={`${styles.tableItemTextSecondary} ${styles.text_colorSecondary}`}>{data[0]? data[0].type : "loading"}</p>
                                             <div className={`${styles.tableItemContent} ${styles.flex_center}`}>
                                                 <img className={styles.tableItemCardImg} src={data[0]?.chain.img} alt="image" />
-                                                <p>{data[0]?.chain.name}</p>
+                                                <p>{data[0]? data[0].chain.name : "loading"}</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </th>
                             <th className={`${styles.bg_colorPrimary} ${styles.text_colorSecondary}`}>
-                                <p className={`${styles.tableItemTextPrimary} ${styles.text_colorPrimary}`}>{`${data[0]?.amount} BNB`} </p>
+                                <p className={`${styles.tableItemTextPrimary} ${styles.text_colorPrimary}`}>{`${data[0]? data[0].amount :"loading"} BNB`} </p>
                                 <p className={`${styles.tableItemTextSecondary} ${styles.text_colorSecondary}`} >{data[0]?.state}</p>
                             </th>
                             <th className={`${styles.bg_colorPrimary} ${styles.text_colorSecondary}`}>
-                                <p className={`${styles.tableItemTextPrimary} ${styles.text_colorPrimary}`}> {formatValue(data[0]?.user)}</p>
+                                <p className={`${styles.tableItemTextPrimary} ${styles.text_colorPrimary}`}> {formatValue(data[0]? data[0].user : "loading")}</p>
                             </th>
                             <th className={`${styles.bg_colorPrimary} ${styles.text_colorSecondary}`}>
-                                <p className={`${styles.tableItemTextPrimary} ${styles.text_colorPrimary}`}>{`${data[0]?.referral_earnings} BNB`}</p>
+                                <p className={`${styles.tableItemTextPrimary} ${styles.text_colorPrimary}`}>{`${data[0]? data[0].referral_earnings : "loading"} BNB`}</p>
                                 <div className={`${styles.tableItemLink} ${styles.flex_center}`}>
                                     <p className={`${styles.tableItemTextSecondary} ${styles.text_colorSecondary}`} >View on BSC Scan</p>
                                     {customLinkIconSmall()}
