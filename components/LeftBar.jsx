@@ -28,7 +28,7 @@ function LeftBar() {
             </div>
             <div className={styles.menu}>
                 {
-                    menuItem.map((element)=>{
+                    menuItem.map((element,index)=>{
                     let icon=null
                     if(element==="Home")
                     icon =homeIcon()
@@ -50,7 +50,7 @@ function LeftBar() {
                     {
                         icon=sec8Icon()
                             return (
-                            <div className={`${styles.menuItem} ${styles.flex_center} ${styles.active} ${styles.color_white}`}>
+                            <div key={index} className={`${styles.menuItem} ${styles.flex_center} ${styles.active} ${styles.color_white}`}>
                             {icon}
                             <a className={styles.menuText}>{element}</a>
                         </div>
@@ -60,7 +60,7 @@ function LeftBar() {
                     icon=docIcon()
 
                     return(
-                        <div className={`${styles.menuItem} ${styles.flex_center}`}>
+                        <div key={index} className={`${styles.menuItem} ${styles.flex_center}`}>
                         {icon}
                         <a className={styles.menuText}>{element}</a>
                     </div>)
