@@ -51,28 +51,28 @@
 }
 
 .menu{
-    margin:5px 20px 0 20px;
-    padding-bottom: 100px;
+    margin:5px 20px 10px 20px;
+    padding-bottom: 30px;
 }
 
 .menuItem{
-    height: 25px;
-    width: fit-content;
-    margin-bottom: 1.8vh;
+    margin-bottom: 5px;
     cursor: pointer;
+    padding: 10px ;
 }
 
+
+.menuItem:hover{
+    background-color: #353945;
+    color: white;
+border-radius: 12px;
+}
 
 .menuText{
     margin-left:30px ;
-    font-size: 14px;
+    font-size: 12px;
 }
 
-.active{
-background-color: #353945;
-padding: 20px 55px 20px 20px ;
-border-radius: 12px;
-}
 
 .bottom{
     position:relative;

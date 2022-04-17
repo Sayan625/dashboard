@@ -47,15 +47,7 @@ function LeftBar() {
                     else if(element==="Section 7")
                     icon=sec7Icon()
                     else if(element==="Section 8")
-                    {
-                        icon=sec8Icon()
-                            return (
-                            <div key={index} className={`${styles.menuItem} ${styles.flex_center} ${styles.active} ${styles.color_white}`}>
-                            {icon}
-                            <a className={styles.menuText}>{element}</a>
-                        </div>
-                        )
-                    }
+                    icon=sec8Icon()
                     else if(element==="Documentation")
                     icon=docIcon()
 

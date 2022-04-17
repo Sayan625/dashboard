@@ -4,6 +4,13 @@
   width: 100vw;
   height: 100vh;
 }
+
+.blocker{
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
 .main {
   width: 100%;
   height: calc(100vh - 36.48px);
@@ -11,7 +18,7 @@
 }
 
 .topBar{
-  line-height: 36.48px;
+  line-height: 36px;
   width: 100vw;
   color: white;
   text-align: center;
@@ -34,3 +41,15 @@
 
 }
 
+@media screen and (max-width: 1200px){
+
+  .blocker{
+      display: block !important; 
+  }
+  
+  .container{
+      display: none;
+  }
+  
+
+}
